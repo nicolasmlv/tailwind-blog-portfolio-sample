@@ -1,0 +1,33 @@
+{
+  "name": "tailwind-blog-portfolio-sample",
+  "version": "1.0.0",
+  "description": "Tailwind CSS Blog & Portfolio Sample static website",
+  "main": "index.js",
+  "scripts": {
+    "buildcss:dev": "tailwindcss build ./main.css -o public/styles.css",
+    "buildcss:prod": "cross-env NODE_ENV=production postcss build ./main.css -o ./public/styles.css",
+    "onchange": "onchange 'tailwind.config.js' 'main.css' -- npm run buildcss:dev",
+    "serve": "live-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasmlv/tailwind-blog-portfolio-sample.git"
+  },
+  "keywords": [],
+  "author": "Nicolas Maloeuvre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicolasmlv/tailwind-blog-portfolio-sample/issues"
+  },
+  "homepage": "https://github.com/nicolasmlv/tailwind-blog-portfolio-sample#readme",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "live-server": "^1.2.1",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.2",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}

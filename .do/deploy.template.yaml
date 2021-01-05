@@ -1,0 +1,7 @@
+spec:
+  name: tailwind-blog-portfolio-sample
+  static_sites:
+  - git:
+    branch: main
+    repo_clone_url: https://github.com/nicolasmlv/tailwind-blog-portfolio-sample.git
+  name: tailwind-blog-portfolio-sample
