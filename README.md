@@ -1,4 +1,4 @@
-This project was created for the [DigitalOcean + dev.to Hackathon](https://dev.to/devteam/announcing-the-digitalocean-app-platform-hackathon-on-dev-2i1k). It is extracted from [my personnal website](https://www.nicomlv.com)
+This project was created for the [DigitalOcean + dev.to Hackathon](https://dev.to/devteam/announcing-the-digitalocean-app-platform-hackathon-on-dev-2i1k). It is extracted from [my personal website](https://www.nicomlv.com)
 
 ## Install on your computer : 
 
@@ -15,10 +15,10 @@ Now you can edit HTML files or your Tailwind config `tailwind.config.js` or your
 
 ## Install on production
 
-You can use this DigitalOcean Button to see it live in seconds, it is free Hosting for static sites. And it may even give you a 60$ credit because there is a [referral code](https://www.digitalocean.com/docs/accounts/referrals/) in it :
+You can use this DigitalOcean Button to see it live in seconds, it is free Hosting for static sites. And it may even give you a 100$ credit because there is a [referral code](https://www.digitalocean.com/docs/accounts/referrals/) in it :
 
 [![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/nicolasmlv/tailwind-blog-portfolio-sample/tree/main&refcode=b6dc3a7658c6)
 
-If you want to edit it, you should run `npm run buildcss:prod` before pushing to production, to save some bandwitdh and some ms. and run back the `buildcss:dev` when editing.
+If you want to edit the code, don't forget to run `buildcss:dev` when editing, and `buildcss:prod` before pushing the code to your repository / in production, to save bandwitdh and some ms.
 
 You can host it on any static hosting provider, specify the `public` directory to be served.
