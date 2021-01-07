@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>My name's Blog</title>
+  <subtitle>All blog entries</subtitle>
+  <link rel="self" href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/"/>
+  <updated>2021-01-03T00:00:00Z</updated>
+  <author>
+    <name>My name</name>
+  </author>
+  <id>urn:uuid:cccd4bfe-8c9e-4ff6-a76f-1b12c69b6d13</id>
+
+  <entry>
+    <title>Tutorial Simple HTML website Tailwind Setup</title>
+    <link href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup"/>
+    <id>urn:uuid:067f68f1-b644-44c4-8b6d-fa71df943ec2</id>
+    <updated>2021-01-03T00:00:00Z</updated>
+    <summary>Create and deploy a HTML website Tailwind CSS v2, using npm, postcss on your custom domain with Netlify (or with render.com or other static hosting service)</summary>
+  </entry>
+
+  <entry>
+    <title>Welcome to my blog</title>
+    <link href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/welcome-to-my-blog"/>
+    <id>urn:uuid:2c09b573-b0f7-4e2d-9865-e4feb55dc39e</id>
+    <updated>2021-01-02T00:00:00Z</updated>
+    <summary>Welcome to my Blog 👍, this is a description</summary>
+  </entry>
+</feed>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app</loc>
+      <lastmod>2021-01-02</lastmod>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog</loc>
+      <lastmod>2021-01-02</lastmod>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/bio</loc>
+      <lastmod>2021-01-02</lastmod>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/welcome-to-my-blog</loc>
+      <lastmod>2021-01-03</lastmod>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup</loc>
+      <lastmod>2021-01-05</lastmod>
+      <priority>1</priority>
+   </url>
+</urlset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>My name's Blog</title>
+ <description>All blog entries</description>
+ <link>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/</link>
+ <lastBuildDate>03 Jan 2021 00:00:00 GMT</lastBuildDate>
+ <ttl>1800</ttl>
+
+ <item>
+  <title>Tutorial Simple HTML website Tailwind Setup</title>
+  <description>Create and deploy a HTML website Tailwind CSS v2, using npm, postcss on your custom domain with Netlify (or with render.com or other static hosting service)</description>
+  <link>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup</link>
+  <guid>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup</guid>
+  <pubDate>03 Jan 2021 00:00:00 GMT</pubDate>
+ </item>
+
+ <item>
+  <title>Welcome to my Blog</title>
+  <description>Welcome to my Blog 👍, this is a description</description>
+  <link>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/welcome-to-my-blog</link>
+  <guid>https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/welcome-to-my-blog</guid>
+  <pubDate>02 Jan 2021 00:00:00 GMT</pubDate>
+ </item>
+
+</channel>
+</rss>

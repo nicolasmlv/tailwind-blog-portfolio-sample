@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/square_icon.jpg"/>
+    <link rel="apple-touch-icon" href="/images/square_icon.jpg"/>
+    <meta name="msapplication-TileImage" content="/images/square_icon.jpg">
+    <title>Tutorial Simple HTML website Tailwind Setup</title>
+
+    <!-- this is a copy paste from this article, as an example. canonical means "copy/pasted from" -->
+    <link rel="canonical" href="https://www.nicomlv.com/blog/tutorial-simple-html-setup" />
+
+    <meta name="description" content="Create and deploy a HTML website Tailwind CSS v2, using npm, postcss on your custom domain with Netlify (or with render.com or other static hosting service)">
+    <meta name="keywords" content="tailwind,css,html,tutorial,tailwindcss,landing page,website,npm,autoprefixer,boilerplate">
+    <meta property="og:title" content="Tutorial Simple HTML website Tailwind Setup">
+    <meta property="og:url" content="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup">
+    <meta property="og:image" content="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup/index.jpg">
+    <meta property="og:image:width" content="2150">
+    <meta property="og:image:height" content="1144">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="Create and deploy a HTML website Tailwind CSS v2, using npm, postcss on your custom domain with Netlify (or with render.com or other static hosting service)">
+
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2021-01-03">
+    <meta property="article:modified_time" content="2021-01-03">
+    <meta property="article:author" content="Nicolas Maloeuvre">
+    <meta property="article:section" content="Technology">
+    <meta property="article:tag" content="tailwind">
+    <meta property="article:tag" content="css">
+    <meta property="article:tag" content="npm">
+    <meta property="article:tag" content="html">
+    
+    <link rel="home" type="application/rss+xml" title="Nicolas Maloeuvre's Blog" href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog.rss">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="/highlight.css">
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <a href="/blog">← Blog Home</a>
+    </div>
+    
+    <div class="py-6 flex flex-col justify-center sm:py-12 px-8">
+      <div class="relative py-3 max-w-xl mx-auto">
+        <div class="absolute inset-0 bg-gradient-to-r from-lime-400 to-green-500 shadow-lg transform skew-y-0 -rotate-6 rounded-3xl"></div>
+        <div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:px-20 sm:py-12">
+          <div class="max-w-md mx-auto">
+            <div class="text-center">
+              <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                Tutorial Simple HTML website Tailwind Setup
+              </h1>
+              <span class="text-green-500 font-semibold">2021-01-03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <a href="https://youtu.be/6BViyXWxARg" target="_blank">
+      <img class="mx-auto" src="/images/youtube_social_icon_red.png" alt="Youtube icon">
+    </a>
+    <div class="text-center">
+      <a href="https://youtu.be/6BViyXWxARg" target="_blank">See on Youtube</a>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="mx-4 bg-white shadow-lg rounded-3xl py-8 px-4 sm:px-20 text-gray-700 leading-6 my-8 space-y-5">
+
+        <p>
+          I wanted to create a simple static website with Tailwind, but unfortunately I am not a frontend programmer, I could not understand the official Tailwind Documentation on how to get started, so here is the tutorial that would have helped me be operational in minutes.
+        </p>
+
+        <pre class="text-xs"><code class="bash">mkdir my-static-website && cd my-static-website
+# by default, npm think you will publish your project as a npm package and so it asks for your name, your email etc, weird, ignore this with “-y” 
+npm init -y
+npm install autoprefixer cssnano onchange postcss postcss-cli tailwindcss cross-env live-server
+# it will install 1000 packages, the mythical frontend bloat was not a myth after all, keep them for you :
+touch .gitignore && echo "node_modules/" >> .gitignore
+# generate your tailwind.config.js file, (npx is a cli tool for npm packages)
+npx tailwindcss init</code></pre>
+
+        <p>Edit the "purge" config in <b>tailwind.config.js</b>:</p>
+
+        <pre class="text-xs"><code class="javascript">purge: {
+  mode: 'all',
+  preserveHtmlElements: false,
+  content: ['./public/**/*.html'],
+},</code></pre>
+
+        <p>On <b>package.json</b>, remove the test script and set this:</p>
+        
+        <pre class="text-xs"><code class="json">"scripts": {
+  "buildcss:dev": "tailwindcss build ./main.css -o public/styles.css",
+  "buildcss:prod": "cross-env NODE_ENV=production postcss build ./main.css -o ./public/styles.css",
+  "onchange": "onchange 'tailwind.config.js' 'main.css' -- npm run buildcss:dev",
+  "serve": "live-server public"
+}</code></pre>
+      
+        <p>Create <b>postcss.config.js</b>:</p>
+      
+        <pre class="text-xs"><code class="javascript">const cssnano = require('cssnano');
+
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    cssnano({
+      preset: 'default',
+    }),
+    require('autoprefixer'),
+  ],
+};</code></pre>
+        <p>Create <b>Readme.md</b> (and read it):</p>
+
+        <pre class="text-xs"><code class="markdown"># My static website
+
+## Run in dev mode
+
+In dev mode you need the full heavy tailwind.css because when you add Tailwind classes in your HTML, it will works directly, in some milliseconds. Be sure to run : `npm run buildcss:dev` if you use `commit_and_push.sh` you don't need it.
+
+When you need to edit your tailwind.config.js (like testing colors) or your custom CSS (`main.css`), you can run `npm run onchange` on one tab, to see those edits live. You don't need it if you only edit your HTML with Tailwind classes.
+
+## Run in production
+
+Compile and commit a light tailwind.css file with `npm run buildcss:prod`. If you use `./commit_and_push.sh "commit message"`, you don't need to run it.</code></pre>
+        <p>Create <b>commit_and_push.sh</b> or run it manually when needed if you prefer:</p>
+        
+        <pre class="text-xs"><code class="bash">npm run buildcss:prod
+git add . -A
+git commit -am $1
+git push
+npm run buildcss:dev
+</code></pre>
+
+        <p>Create <b>main.css</b>:</p>
+        <pre class="text-xs"><code class="css">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* add your custom CSS here if you need */
+</code></pre>
+        <p>Create <b>public/index.html</b>:</p>
+        <pre class="text-xs"><code class="bash">mkdir public && cd public && touch index.html</code></pre>
+        <pre class="text-xs"><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;My static page&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Now you are ready. Generate for the first time the heavy Tailwind with <b>npm run buildcss:dev</b>. Accordingly to your Readme, run <b>npm run onchange</b> and <b>npm run serve</b> in your terminal, add some Tailwind classes, edit your tailwind.config.js, add new HTML pages, it's working.</p>
+
+        <h2 class="text-2xl font-bold">Ship it</h2>
+        
+        <p>You don't want to use the full tailwind css (4Mb) on production, <b>buildcss:prod</b> generates a light one. When you edit your HTML though, you prefer to use <b>buildcss:dev</b> because it is faster.</p>
+
+        <ul class="list-disc list-inside">
+          <li>Create a Github repository</li>
+          <li>Create a render.com account (or Netlify, or similar), "New" / "Static site", and link your repository. Edit "Public directory" to : "./public".</li>
+          <li>Commit a new edit in order to trigger the build, it works.</li>
+          <li>Add your domain, add the A and CNAME entry, wait 5 minutes and it is live on your domain.</li>
+        </ul>
+
+        <hr>
+
+        <div>
+          If this article was useful to you please share / like / subscribe / comment on <a href="https://youtu.be/6BViyXWxARg" target="_blank">Youtube</a> or <a href="https://twitter.com/NicolasMLV/status/1345582148644966405" target="_blank">Twitter</a> or <a href="https://dev.to/nicolasmlv/tutorial-simple-html-website-tailwind-setup-cma" target="_blank">dev.to</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="py-6 sm:py-12 max-w-4xl mx-auto text-gray-700">
+      © All rights reserved, find me on <a href="https://twitter.com/nicolasMLV">Twitter</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "My name's Blog",
+  "icon": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/images/square_icon.jpg",
+  "home_page_url": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app",
+  "feed_url": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog.json",
+  "items": [
+      {
+        "id": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup",
+        "title": "Tutorial Simple HTML website Tailwind Setup",
+        "content_text": "Create and deploy a HTML website Tailwind CSS v2, using npm, postcss on your custom domain with Netlify (or with render.com or other static hosting service)",
+        "date_published": "2021-01-03T00:00:00Z",
+        "url": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup"
+      },
+      {
+        "id": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/welcome-to-my-blog",
+        "title": "Welcome to my blog",
+        "content_text": "Welcome to my Blog 👍, this is a description",
+        "date_published": "2021-01-03T00:00:00Z",
+        "url": "https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog/tutorial-simple-html-tailwind-setup"
+      }
+  ]
+}

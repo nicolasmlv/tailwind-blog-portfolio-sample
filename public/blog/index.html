@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="/images/square_icon.jpg"/>
     <link rel="apple-touch-icon" href="/images/square_icon.jpg"/>
     <meta name="msapplication-TileImage" content="/images/square_icon.jpg">
-    <title>My name</title>
+    <title>My name - Blog</title>
     <link rel="canonical" href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app"/>
     <meta name="description" content="I am a web/app software programmer living in Paris, France">
     <meta name="keywords" content="My name, Freelance, Paris, Ruby on Rails">
@@ -15,15 +15,15 @@
     <link rel="alternate" type="application/atom+xml" title="My name's Blog" href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog.atom"/>
     <link rel="alternate" type="application/feed+json" title="My name's Blog" href="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/blog.json"/>
 
-    <meta property="og:url" content="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="My name">
+    <meta property="og:url" content="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="My name"/>
     <meta property="og:description" content="I am a web/app software programmer living in Paris, France">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/index.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:height" content="1000">
-    <meta property="og:image:width" content="522">
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:image" content="https://www.tailwind-blog-portfolio-sample-jdnb6.ondigitalocean.app/index.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:height" content="1000"/>
+    <meta property="og:image:width" content="522"/>
 
     <meta name="twitter:card" content="summary">
     <!-- <meta name="twitter:site" content="@twitterHandle">
@@ -33,6 +33,9 @@
   </head>
 
   <body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <a href="/">← Home</a>
+    </div>
 
     <div class="py-6 flex flex-col justify-center sm:py-12 px-8">
       <div class="relative py-3 max-w-xl mx-auto">
@@ -42,15 +45,16 @@
             <img src="/images/picture.jpg" class="h-20 sm:h-32 rounded-md mx-auto animate-bounce mt-5 sm:mt-8"/>
             <div class="text-center pt-6">
               <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-                MY NAME
+                MY NAME - BLOG
               </h1>
-              <button onclick="document.getElementById('pronunciation').play()">🔊</button>
-              <audio src="/pronunciation.mp3" id="pronunciation" preload="none"></audio>
+              
+              <div class="text-xs text-gray-500 space-x-4 pt-8">
+                <a href="/blog.rss">RSS</a>
+                <a href="/blog.json">JSON Feed</a>
+                <a href="/blog.atom">Atom</a>
+              </div>
             </div>
 
-            <div class="pt-6 leading-8 text-gray-700 text-center">
-              I am a web/app software programmer living in <a href="https://goo.gl/maps/7fF4dNdcVwPohaJeA" target="_blank">Paris</a>, France. You can find me on <a href="https://twitter.com/nicolasMLV" target="_blank">Twitter</a>, <a href="https://www.linkedin.com/in/nicolasmlv/" target="_blank">Linkedin</a> or send me an email <a href="mailto:contact@example.com" target="_blank">contact@example.com</a>
-            </div>
           </div>
         </div>
       </div>
@@ -59,16 +63,6 @@
     <div class="max-w-4xl mx-auto py-6 sm:py-12">
       <div class="mx-4 bg-white shadow-lg rounded-3xl py-6 px-4 sm:px-20 text-gray-700 leading-6 sm:py-12 space-y-5">
 
-        <h2 class="text-3xl inline font-bold mr-5">
-          <a href="/blog">Blog</a>
-        </h2>
-
-        <span class="text-xs text-gray-500 space-x-4">
-          <a href="/blog.rss">RSS</a>
-          <a href="/blog.json">JSON Feed</a>
-          <a href="/blog.atom">Atom</a>
-        </span>
-
         <div>
           <span class="mr-2 sm:mr-5 text-green-500 font-semibold">2021-01-03</span>
           <a href="/blog/tutorial-simple-html-tailwind-setup">A second blog entry : Tailwind CSS setup Tutorial</a>
@@ -76,7 +70,7 @@
 
         <div>
           <span class="mr-2 sm:mr-5 text-green-500 font-semibold">2021-01-02</span>
-          <a href="/blog/welcome-to-my-blog">Welcome to my blog</a> <a href="https://www.nicomlv.com/template-blog-portfolio-tailwind-css" class="text-gray-400">(thanks)</a>
+          <a href="/blog/welcome-to-my-blog">Welcome to my blog</a>
         </div>
 
         <div>
@@ -120,11 +114,11 @@
     <div class="text-center py-6 sm:py-12">
       <a href="/bio" class="text-xl font-bold">Biography →</a>
     </div>
+    
 
     <div class="py-6 sm:py-12 max-w-4xl mx-auto text-gray-700">
       © All rights reserved, find me on <a href="https://twitter.com/nicolasMLV">Twitter</a>
     </div>
-    
   </body>
 
 </html>
